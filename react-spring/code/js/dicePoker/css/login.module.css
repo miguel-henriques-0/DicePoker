@@ -1,0 +1,102 @@
+
+
+:root {
+    --poker-red: #D32F2F;
+    --poker-green: #2E7D32;
+    --poker-gold: #FFC107;
+    --poker-light-bg: #F5F5F5;
+    --poker-dark-bg: #1C1C1C;
+    --font-family-poker: 'Arial', sans-serif;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    background-color: var(--poker-dark-bg);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.loginCard {
+    background-color: var(--poker-light-bg);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 0 5px var(--poker-green);
+    width: 100%;
+    max-width: 400px;
+    font-family: var(--font-family-poker), serif;
+    border: none;
+}
+
+.inputGroup {
+    margin-bottom: 1.5rem;
+}
+
+
+.loginCard label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--poker-dark-bg);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.loginCard input[type="text"],
+.loginCard input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.loginCard input:focus {
+    border-color: var(--poker-gold);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.primaryButton {
+    background-color: var(--poker-green);
+    color: var(--poker-light-bg);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.primaryButton:hover {
+    background-color: #246527;
+    transform: translateY(-1px);
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: var(--poker-red);
+    border: 2px solid var(--poker-red);
+    padding: 0.8;
+}
+
+.errorMessage {
+    color: var(--poker-red);
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+}

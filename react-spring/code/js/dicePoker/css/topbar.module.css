@@ -1,0 +1,55 @@
+
+:root {
+    --poker-red: #D32F2F;
+    --poker-green: #2E7D32;
+    --poker-gold: #FFC107;
+    --poker-light-bg: #F5F5F5;
+    --font-family-poker: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: var(--poker-green);
+    border-bottom: 5px solid var(--poker-gold);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 3rem;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar p {
+    color: var(--poker-gold);
+    font-family: var(--font-family-poker), serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+
+    margin: 0;
+}
+
+
+.navbar :global(.login-button) {
+    background-color: var(--poker-red);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect */
+.navbar :global(.login-button):hover {
+    background-color: #A01C1C;
+    transform: translateY(-1px);
+    cursor: pointer;
+}

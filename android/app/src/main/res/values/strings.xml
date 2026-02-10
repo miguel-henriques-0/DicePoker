@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name" translatable="false">Chelas Poker Dice</string>
+    <string name="login_empty_input">This field cannot be empty!</string>
+    <string name="login_label" translatable="false">Login</string>
+    <string name="username_label">Username</string>
+    <string name="password_label" translatable="false">Password</string>
+    <string name="login_in_text">Logging you in…</string>
+    <string name="no_user_found">Sorry no user found, try again</string>
+    <string name="statistics_button">Statistics</string>
+    <string name="about_button">About</string>
+    <string name="about_the_game">About the game</string>
+    <string name="game_info">The game is played over N rounds, where N is an odd number chosen at the start.
+        Each round consists of two turns, one per player. On their turn, players start by rolling all 5 dice and may,
+        up to two times, hold any subset and re‑roll the remaining dice, for a maximum of three rolls per turn.
+        At the end of the rolls, the player’s final dice combination is established (i.e., the player’s hand for the turn).
+        Once both players have taken their turn in the round, their hands are compared and the higher-ranking hand wins the round.
+        Then the next round begins, with the starting player alternating between rounds. After all N rounds are completed,
+        the player who has won the most rounds is declared the victor.
+        Dice combinations are ranked in descending order of strength as follows:
+        Five of a Kind, Four of a Kind, Full House, Straight, Three of a Kind, Two Pair, One Pair,
+        and finally Bust (no combination, hand strength determined by the highest die).
+        These rankings adhere to the traditional poker-style hierarchy adapted for dice-based gameplay, with Five of a Kind placed above
+        all other hands and excluding Flushes.
+    </string>
+    <string name="learn_the_rules">Learn the rules</string>
+    <string name="send_email">Send email</string>
+    <string name="lobby_creation_name_input_error">Lobby name cannot be empty</string>
+    <string name="lobby_creation_name_input_label">Lobby Name</string>
+    <string name="lobby_creation_description_input_error">Description cannot be empty</string>
+    <string name="game_description_input_label">Description</string>
+    <string name="number_of_players_input_label">Number of players</string>
+    <string name="number_of_rounds_input_label">Number of Rounds</string>
+    <string name="create_lobby_button">Create Lobby</string>
+    <string name="leave_button">Leave</string>
+    <string name="lobbies">Lobbies</string>
+    <string name="logout_button">Logout</string>
+    <string name="invite_code_label">Invite Code</string>
+    <string name="no_account">Don\'t have an account yet?</string>
+    <string name="register">Register</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="login_page_title">Login/Register</string>
+    <string name="error_registering_user">Error registering user. Please check the invite code.</string>
+    <string name="statistics">Statistics</string>
+    <string name="back">Back</string>
+    <string name="mailto">mailto:</string>
+    <string name="contact_developers">Contact Developers</string>
+    <string name="developed_by">Developed by</string>
+    <string name="isel_students">ISEL Students</string>
+    <string name="start_match">Start Match</string>
+    <string name="about">About</string>
+    <string name="create_lobby">Create Lobby</string>
+    <string name="error_occurred">An unexpected error occurred</string>
+    <string name="try_again">Try Again</string>
+    <string name="game_over">Game Over</string>
+    <string name="victory">Victory!</string>
+    <string name="defeat">Defeat</string>
+    <string name="congratulations_you_won">Congratulations! You won!</string>
+    <string name="better_luck_next_time">Better luck next time!</string>
+    <string name="winners">Winners</string>
+    <string name="continue_button">Continue</string>
+    <string name="rolls_left">Rolls Left</string>
+    <string name="end_turn">End Turn</string>
+    <string name="roll_dice">Roll Dice</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="start_join_game">Start / Join Game</string>
+    <string name="your_invite_code">Your Invite Code</string>
+    <string name="refresh_invite_code">Refresh Invite Code</string>
+    <string name="game_settings">Game Settings</string>
+    <string name="no_lobbies_available">No lobbies available</string>
+    <string name="refresh_lobbies">Refresh Lobbies</string>
+    <string name="join">Join</string>
+    <string name="rounds">Rounds:</string>
+    <string name="players">Players</string>
+    <string name="continue_label">Continue</string>
+    <string name="round">Round</string>
+    <string name="round_complete">Round Complete!</string>
+    <string name="the_game_has_ended">The game has ended. Click continue to see the results.</string>
+    <string name="get_ready_for_the_next_round">Get ready for the next round</string>
+    <string name="total_score">Total Score</string>
+    <string name="current_handrank">Current HandRank</string>
+    <string name="no_statistics_yet">No Statistics Yet</string>
+    <string name="start_playing_statistics">Start playing games to see your statistics here!</string>
+    <string name="timed_out">Your turn has timed out.</string>
+    <string name="place_your_ante">Place Your Ante</string>
+    <string name="your_balance">Your Balance</string>
+    <string name="available">Available</string>
+    <string name="ante_amount">Ante Amount</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="enter_a_valid_amount">Enter a valid amount</string>
+    <string name="ante_placed">Ante placed! Waiting for other players…</string>
+    <string name="place_your_ante_to_continue">Place your ante to continue</string>
+    <string name="waiting_lobby">Waiting Lobby</string>
+    <string name="game_details">Game Details</string>
+    <string name="starts_in">Starts in</string>
+    <string name="waiting_for_more_players">Waiting for more players to join…</string>
+    <string name="balance">Balance:</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_empty_input">Este campo não pode estar vazio!</string>
+    <string name="username_label">Nome de Utilizador</string>
+    <string name="login_in_text">A carregar o perfil…</string>
+    <string name="no_user_found">Desculpa não foi possível encontrar o utilizador</string>
+    <string name="statistics_button">Estatísticas</string>
+    <string name="about_button">Acerca</string>
+    <string name="about_the_game">Acerca do jogo</string>
+    <string name="game_info">
+        O jogo tem N rondas, onde N é um número ímpar escolhido no início.
+        Cada ronda consiste em turnos, um por cada jogador.
+        No seu turno, os jogadores começam por rodar todos os 5 dados e podem,
+        até duas vezes, manter qualquer subconjunto e rodar os dados restantes.
+        A combinação final dos dados é estabelecida (isto é, a mão do jogador para o turno) quando os jogadores terminam a jogada.
+        Depois as mãos são comparadas e a mão mais alta vence a ronda.
+        A próxima ronda começa alternando o jogador que começa entre rondas.
+        Terminadas todas as N rondas, o jogador que vencer mais rondas é declarado o vencedor.
+        As combinações de dados são comparadas em ordem decrescente pela seguinte ordem: \'Five of a Kind\', \'Four of a Kind\',
+        \'Full House\', \'Straight\', \'Three of a Kind\', \'Two Pair\', \'One Pair\', e \'Bust\'
+        (sem combinação, a classificação da mão é determinada pelo dado mais alto).
+        Estas combinações seguem a hierarquia tradicional de poker adaptada para jogos de dados numéricos, sendo o \'Five of a Kind\'
+        colocado acima de todas as outras mãos e excluindo os \'Flushes\'.
+    </string>
+    <string name="learn_the_rules">Aprende as regras</string>
+    <string name="send_email">Envia-nos um email</string>
+    <string name="lobby_creation_name_input_error">Nome do lobby não pode estar vazio</string>
+    <string name="lobby_creation_name_input_label">Nome do Lobby</string>
+    <string name="lobby_creation_description_input_error">Descrição não pode estar vazia</string>
+    <string name="game_description_input_label">Descrição</string>
+    <string name="number_of_players_input_label">Número de Jogadores</string>
+    <string name="number_of_rounds_input_label">Número de Rondas</string>
+    <string name="create_lobby_button">Criar Lobby</string>
+    <string name="leave_button">Abandonar</string>
+    <string name="lobbies">Lista de Lobbies</string>
+    <string name="logout_button">Terminar sessão</string>
+    <string name="invite_code_label">Código de Convite</string>
+    <string name="no_account">Ainda não tem conta?</string>
+    <string name="register">Registar</string>
+    <string name="already_have_account">Já tem conta?</string>
+    <string name="login_page_title">Entrar/Registar</string>
+    <string name="error_registering_user">Erro ao criar utilizador. Verifique o código de convite.</string>
+    <string name="statistics">Estatísticas</string>
+    <string name="back">Back</string>
+    <string name="mailto">mailto:</string>
+    <string name="contact_developers">Contactar</string>
+    <string name="developed_by">Desenvolvido por</string>
+    <string name="isel_students">Estudantes do ISEL</string>
+    <string name="start_match">Começar Jogo</string>
+    <string name="about">Sobre</string>
+    <string name="create_lobby">Criar Jogo</string>
+    <string name="error_occurred">Ocorreu um erro inesperado</string>
+    <string name="try_again">Tenta de novo</string>
+    <string name="game_over">Fim do jogo</string>
+    <string name="victory">Vitória!</string>
+    <string name="defeat">Derrota</string>
+    <string name="congratulations_you_won">Parabéns! Venceste!</string>
+    <string name="better_luck_next_time">Melhor sorte para a próxima!</string>
+    <string name="winners">Vencedores</string>
+    <string name="continue_button">Continuar</string>
+    <string name="rolls_left">Rodares disponíveis</string>
+    <string name="end_turn">Terminar o turno</string>
+    <string name="roll_dice">Rodar dado</string>
+    <string name="welcome_back">Bem-vindo de volta!</string>
+    <string name="start_join_game">Criar / Juntar jogo</string>
+    <string name="your_invite_code">O teu código de convite</string>
+    <string name="refresh_invite_code">Novo código de convite</string>
+    <string name="game_settings">Configurações do jogo</string>
+    <string name="no_lobbies_available">Sem jogos disponíveis</string>
+    <string name="refresh_lobbies">Carregar jogos</string>
+    <string name="join">Juntar</string>
+    <string name="rounds">Rondas:</string>
+    <string name="players">Jogadores</string>
+    <string name="continue_label">Continuar</string>
+    <string name="round">Ronda</string>
+    <string name="round_complete">Ronda completa!</string>
+    <string name="the_game_has_ended">O jogo terminou. Carrega em continuar para ver os resultados.</string>
+    <string name="get_ready_for_the_next_round">Prepara-te para a próxima ronda</string>
+    <string name="total_score">Pontuação total</string>
+    <string name="current_handrank">Rank da mão</string>
+    <string name="no_statistics_yet">Sem estatísticas</string>
+    <string name="start_playing_statistics">Começa a jogar para ver as tuas estatísticas</string>
+    <string name="timed_out">A tua vez expirou.</string>
+    <string name="place_your_ante">Faz a tua aposta</string>
+    <string name="your_balance">O teu saldo</string>
+    <string name="available">disponível</string>
+    <string name="ante_amount">Valor da aposta</string>
+    <string name="enter_amount">Introduz um valor</string>
+    <string name="enter_a_valid_amount">Introduz um valor válido</string>
+    <string name="ante_placed">Aposta feita! À espera dos outros jogadores…</string>
+    <string name="place_your_ante_to_continue">Faz tua aposta para continuar</string>
+    <string name="waiting_lobby">Sala de Espera</string>
+    <string name="game_details">Detalhes do jogo</string>
+    <string name="starts_in">Começa em</string>
+    <string name="waiting_for_more_players">À espera de mais jogadores…</string>
+    <string name="balance">Saldo:</string>
+</resources>

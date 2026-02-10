@@ -1,0 +1,99 @@
+# User inserted into database for testing
+@username = firstUser
+@password = password1
+
+
+@username2 = player
+@password2 = 12345
+
+# Get token for firstUser (must replace token manually after first run)
+@token = fkowLQpyWVtUizZaiOgOhaVRvaZVjN56KOw-PztmO18=
+@token2 = 31BLNfqqPbyXzG24tm1sA-w1zg2m3fkblN6VUVYSHTs=
+
+### Get token
+POST http://localhost:8180/api/users/token
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Get invite code
+GET http://localhost:8180/api/users/createInvite
+Authorization: bearer {{token}}
+
+### Create User with invite code
+POST http://localhost:8180/api/users
+Content-Type: application/json
+
+{
+  "username": "player",
+  "password": "12345",
+  "inviteCode": "7038"
+}
+
+### Get user info
+GET http://localhost:8180/api/me
+Authorization: bearer {{token}}
+
+### Create Game
+POST http://localhost:8180/api/game/create
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+  "name": "asdasdsa",
+  "description": "asdasdadsa",
+  "rounds": 4,
+  "maxPlayers": 5,
+  "minPlayers": 2,
+  "timeout": 100
+}
+
+### Leave
+POST http://localhost:8180/api/game/8/leave
+Authorization: bearer {{token2}}
+
+
+### Join Game
+POST http://localhost:8180/api/game/1/join
+Content-Type: application/json
+Authorization: bearer {{token2}}
+
+
+### Start Game
+POST http://localhost:8180/api/game/1/start
+Authorization: bearer {{token}}
+
+
+### Bet
+POST http://localhost:8180/api/game/1/play
+Content-Type: application/json
+Authorization: bearer {{token2}}
+
+{
+    "playAction": "bet",
+    "bet": 2
+}
+
+
+### EndTurn
+POST http://localhost:8180/api/game/1/play
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+  "playAction": "end"
+}
+
+
+### Roll
+POST http://localhost:8180/api/game/1/play
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+  "playAction": "roll",
+  "dices": [0, 1, 2, 3, 4]
+}

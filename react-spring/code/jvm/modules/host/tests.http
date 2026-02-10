@@ -1,0 +1,149 @@
+# User inserted into database for testing
+@username = firstUser
+@password = password1
+
+### Step 1: Get token for host
+# @name getHostToken
+POST http://localhost:8180/api/users/token
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+> {%
+    client.global.set("hostToken", response.body.token);
+%}
+
+### Step 2: Create invite code
+# @name createInvite
+GET http://localhost:8180/api/users/createInvite
+Authorization: bearer {{hostToken}}
+
+> {%
+    client.global.set("inviteCode", response.body.inviteCode);
+%}
+
+### Step 3: Create new user with invite
+# @name createUser
+POST http://localhost:8180/api/users
+Content-Type: application/json
+
+{
+  "username": "second2",
+  "password": "a1234",
+  "inviteCode": "{{inviteCode}}"
+}
+
+### Step 4: Get token for new player
+# @name getPlayerToken
+POST http://localhost:8180/api/users/token
+Content-Type: application/json
+
+{
+  "username": "second2",
+  "password": "a1234"
+}
+
+> {%
+    client.global.set("playerToken", response.body.token);
+%}
+
+### Step 5: Create game
+# @name createGame
+POST http://localhost:8180/api/game/create
+Content-Type: application/json
+Authorization: bearer {{hostToken}}
+
+{
+  "name": "Automated Test Game",
+  "description": "Full game test",
+  "rounds": 4,
+  "maxPlayers": 2,
+  "minPlayers": 2,
+  "timeout": 100
+}
+
+> {%
+    client.global.set("gameId", response.body.id);
+%}
+
+### Step 6: Player joins game
+PUT http://localhost:8180/api/game/{{gameId}}/join
+Authorization: bearer {{playerToken}}
+
+### Step 7: Start game
+PUT http://localhost:8180/api/game/{{gameId}}/start
+Authorization: bearer {{hostToken}}
+
+### Step 8: Host places bet
+PUT http://localhost:8180/api/game/{{gameId}}/play
+Content-Type: application/json
+Authorization: bearer {{hostToken}}
+
+{
+  "playAction": "bet",
+  "bet": 2
+}
+
+### Step 9: Player places bet
+PUT http://localhost:8180/api/game/{{gameId}}/play
+Content-Type: application/json
+Authorization: bearer {{playerToken}}
+
+{
+  "playAction": "bet",
+  "bet": 3
+}
+
+### Step 10: Host rolls dice
+PUT http://localhost:8180/api/game/{{gameId}}/play
+Content-Type: application/json
+Authorization: bearer {{hostToken}}
+
+{
+  "playAction": "roll",
+  "dices": [0, 1, 2, 3, 4]
+}
+
+### Step 10.1 Host ends trun
+PUT localhost:8180/api/game/{{gameId}}/play
+Content-Type: application/json
+Authorization: bearer {{hostToken}}
+
+{
+  "playAction": "end"
+}
+
+### Step 11: Player rolls dice
+PUT http://localhost:8180/api/game/{{gameId}}/play
+Content-Type: application/json
+Authorization: bearer {{playerToken}}
+
+{
+  "playAction": "roll",
+  "dices": [0, 1, 2, 3, 4]
+}
+
+### Step 11.1: Player ends turn
+PUT http://localhost:8180/api/game/{{gameId}}/play
+Content-Type: application/json
+Authorization: bearer {{playerToken}}
+
+{
+  "playAction": "end"
+}
+
+
+### Next Round
+PUT http://localhost:8180/api/game/{{gameId}}/nextRound
+Authorization: bearer {{hostToken}}
+
+
+### event
+POST http://localhost:8180/api/events/send?id=1
+
+{
+    teste: "abcd"
+}

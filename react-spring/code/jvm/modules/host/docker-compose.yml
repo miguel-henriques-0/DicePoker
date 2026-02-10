@@ -1,0 +1,59 @@
+services:
+  dp-postgres-tests:
+    container_name: dp-postgres-tests
+    image: dice-pocker-postgres-test
+    environment:
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=changeit
+      - POSTGRES_DB=db
+    ports:
+      - 5432:5432
+
+  # ttt-jvm-1 and ttt-jvm-2 are used to illustrate scenarios with a fixed number of servers
+  # with static and well know names.
+  dp-jvm-1:
+    container_name: dp-jvm-1
+    hostname: dp-jvm-1
+    image: dice-pocker-jvm
+    environment:
+      PORT: 8081
+      DB_URL: "jdbc:postgresql://db-tests:5432/db?user=dbuser&password=changeit"
+    ports:
+      - 8081:8081
+
+  dp-jvm-2:
+    container_name: dp-jvm-2
+    hostname: dp-jvm-2
+    image: dice-pocker-jvm
+    environment:
+      PORT: 8082
+      DB_URL: "jdbc:postgresql://db-tests:5432/db?user=dbuser&password=changeit"
+    ports:
+      - 8082:8082
+
+  # ttt-jvm-dynamic is used to illustrate scenarios with a dynamic number of servers
+  # without static and well know names.
+  # We will use docker compose scaling to create multiple instances of this service
+  dp-jvm-dynamic:
+    image: dice-pocker-jvm
+    hostname: dp-jvm-dynamic
+    environment:
+      PORT: 8080
+      DB_URL: "jdbc:postgresql://db-tests:5432/db?user=dbuser&password=changeit"
+
+  # The service running the load-balancer
+  nginx:
+    container_name: dp-nginx
+    image: dice-pocker-nginx
+    ports:
+      - 8080:8080
+      - 8088:8088
+    depends_on:
+      - dp-jvm-1
+      - dp-jvm-2
+
+  # Just a machine running ubuntu, with 'dig' installed so that we can observe the docker compose environment.
+  ubuntu:
+    container_name: ubuntu
+    image: dice-pocker-ubuntu
+    tty: true
