@@ -1,6 +1,4 @@
-# DicePoker App
-
-## 🎲 Dice Poker Application
+# 🎲 Dice Poker Application
 
 A full-stack Dice Poker application featuring a Spring Boot backend, a React web frontend, and a native Android mobile frontend. The app allows users to play Dice Poker with game logic handled on the server and multiple client interfaces for accessibility.
 
